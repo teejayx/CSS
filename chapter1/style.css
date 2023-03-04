@@ -1,0 +1,141 @@
+body {
+    font-family: sans-serif;
+}
+
+
+h1 {
+    color: #2f4f4f;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#main-nav {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+
+.nav a {
+    color: white;
+    background-color: #13a4a4;
+    padding: 5px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+
+}
+
+a.featured {
+    background-color: orange ; 
+}
+
+/* a an id takes precendent over a class and tag or selector 
+/*
+Rules of specificity 
+
+1. Id has more priority than a class/ classes or tag 
+2. A class sector has priority than a tag 
+3. sector with most classes has a higher pririty afer 2 above 
+4.selector with the most tags names wins
+
+Nonation for specifity 
+a common way to indicate specifity is in a number form, often with commas between each number 
+e.g 1,2,2 indicates ID, two classes and two tags 
+
+#page-header #page-tile has 2 ids, no classes and no tags = 2,0,0
+
+the selector ul li has two tags no ids or classes = 0,0, 2
+
+inline css has a specifity of 1,0,0,0 which will overide 0, 1,20 one id and two clasess 
+
+!important overrides all 
+
+source order 
+if there both have same specifitcity 
+i.e 0,1,1 the last element take precedence 
+
+*/
+
+
+a:link{
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+a:active {
+    color: red
+}
+
+/*
+Link style and styling orders 
+LoVE/HAte
+link - Visited > Hover > Active 
+gieven the same specifity, later sty;e overrrides earlier ones 
+
+avoid inheritance and minimize the use of id 
+
+types of origins and order preference 
+1. Author important
+2. Author 
+3. User Agent  
+
+
+Cascade vaues - a value for a particular propertu applied to a an element as a result of cascae 
+
+Special values -
+1. inherit - use to allow inheritance take place 
+2. initial - reset to original/default
+*/
+
+.footer {
+    color: #666;
+    background-color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+/* tells the link tag a to inherit the foooter's color above
+initial resets to the default value 
+auto doesnt isnt default value for all propertises  
+
+*/
+.footer a {
+    color: initial;
+    text-decoration: underline;
+}
+
+/*
+short hand propertise let you set the values of several other propertise at a time 
+e.g 
+
+font: italics bold 18px/1.2 "Helvetica"
+backfrond  fror background-color, background-size etc 
+shorthands lets you omit cetain values which sets them ot default 
+
+it is important to undstand the order for shorthand properties 
+
+top, right, bottom, left 
+TRouBle Top rifht bottoem left 
+Specify three values, and the left and right side will both use the second one. Specify two values, and the top and bottom will use the first one.
+ If you specify only one value, it will apply to all four sides.
+
+ some propertises have only 2 values or the first value is right/left then second is top/bottome opposite pf above 
+ e.g background-position, box-shadow, text-shadow 
+ e.g 
+ 
+
+
+*/
+
